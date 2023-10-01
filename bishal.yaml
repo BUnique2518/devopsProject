@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: App-update
 spec:
-  replicas: 3  # Adjust the number of replicas as needed
+  replicas: 3  
   selector:
     matchLabels:
       app: App-update
