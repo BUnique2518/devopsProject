@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: App-update-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /app
+            pathType: Prefix
+            backend:
+              service:
+                name: App-update-service
+                port:
+                  number: 80
