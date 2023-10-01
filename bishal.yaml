@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: App-update
+spec:
+  replicas: 3  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: App-update
+  template:
+    metadata:
+      labels:
+        app: App-update
+    spec:
+      containers:
+        - name: web-app
+          image: App-image
